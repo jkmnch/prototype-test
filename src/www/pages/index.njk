@@ -1,13 +1,16 @@
-{% extends "_layout/_sidebar-left.njk" %}
+{% extends "_layout/_sidebar-right.njk" %}
 {# Imports #}
 {% from "components/accordion/_accordion.njk" import wmndsAccordion %}
-
-{% block sidebar %}
-    This is the sidebar
-{% endblock sidebar %}
+{% from "components/content-card/_content-card.njk" import wmndsContentCard %}
 
 {% block content %}
-    <h1>This the homepage</h1>
-    <br>
-    <a href="./example-page">Example<a>
+<div class="wmnds-m-b-lg">
+    {{ wmndsAccordion() }}
+</div>
+    {{ wmndsAccordion() }}
 {% endblock content %}
+
+
+{# {% block sidebar %}
+    {{ wmndsContentCard() }}
+{% endblock sidebar %} #}
